@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "COM_DEBUG")(type "KiCad")(uri "${KIPRJMOD}/COM_DEBUG.kicad_sym")(options "")(descr ""))
+)
