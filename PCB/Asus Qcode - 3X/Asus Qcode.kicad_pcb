@@ -840,7 +840,7 @@
 
   (footprint "MountingHole:MountingHole_2.2mm_M2_Pad" (layer "F.Cu")
     (tstamp 5a5b4dd0-f36a-4795-8a55-8579a0100d26)
-    (at 131.445 15.24)
+    (at 132.08 15.24)
     (descr "Mounting Hole 2.2mm, M2")
     (tags "mounting hole 2.2mm m2")
     (attr exclude_from_pos_files exclude_from_bom)
