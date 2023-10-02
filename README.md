@@ -32,3 +32,21 @@ Both designes use a 2x3 pin header for the COM_DEBUG port as well as have a sing
 Unforunatly, the COM_DEBUG header dose not provide a +5V on it. It has a +3.3V pin, but no +5V power. As such in order to power the Arduino Mini an auxilarly source of +5V is needed. To the left side of the MCU a header has been provided for this. You can wire up the +5V pin dirrectly to a +5V source, I am using a USB2 header myself, or you can connect the RAW pin to any voltage between +7V-12V (a fan header for instance). The USB2 header has the nice side effect for me of turning the display off when my PC is in hard off power states but not while it is sleeping.
 
 # Firmware
+Currently only prelimary firmware is avilible. This code only works on the 1X board varrient and it nearly identical to what was running on the bread board protoype. It is a farily simple afair that just spends the entire main loop checking for new POST code data and has a 100hz interupt driving the multiplexed displays. This firmware is likely fine for 98% of poteial users though and will likely remain as the only firmware avaible for the simple 1X board.
+
+As for the 3X board, I intend to add a proper settings menu to it using the extra display realastate among other things. By default the displays will likely 'scroll' though the last three codes reclived, giving you easy access to more than just one of the POST codes your motherboard has sent. It may even be possible to store basic descriptions of the codes and display them on the screens, though that is likely exiting the scope of what a single Atmel-368p can do on it's own.
+
+# Future plans
+Someone mentioned somthing interesting to me on the Reddit post. They were wondering if an ESP32 could plug into the motherboard and send the codes to a phone. This got my attention as ESP32's use +3.3V power, which is already being provided right on the COM_DEBUG connector. I found one for fairly cheep and ordered it, along with a compatable TFT LCD screen. There are a few cool posistibilties for this.
+
+It would be pretty easy to design a small board that accepts a cheap ESP32 module and plugs right into the motherboard, supplying both power and serial data to the ESP32. You could then connect to it with a mobile device and have easy access to POST data, all at an extreemly cheap cost.
+
+The other idea that I am interested in invloves that TFT LCD. The 8-bit MCU in an Arduino simply can't do graphics, but an ESP32 certianly can. It shouldn't be that hard to hook one up to a cheap TFT LCD on a board somewhere between the size as the 1X and 3X. With an LCD the posibilites for the firmware are endless. An ESP32 would be capabale of storeing thousands of past codes in history and likely a complete lexicon of code desriptions easily displayed on the TFT LCD screen.
+
+# So, are you going to sell it?
+Honestly, I am not sure...
+
+I have never sold a PCB project like this before. The base parts for the 1X and even the 3X boards bearly even add up to $10 on Aliexpress. I built the prototype with random stuff that I just had on hand. If there is a solid interest in people who want to buy one, I might consider it, but as of now I want to wait and see.
+
+# Disclaimer
+Neither my self or this project is associated with Asus or AsusTEK in any way shape or form. I am an independant hobbiest.
