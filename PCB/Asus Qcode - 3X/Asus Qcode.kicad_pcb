@@ -1024,7 +1024,7 @@
     (tstamp 7938d809-e3be-4b8e-bc30-2afa325bc6e3)
     (at 25.4 58.42)
     (attr board_only exclude_from_pos_files exclude_from_bom)
-    (fp_text reference "G***" (at 0 0) (layer "F.SilkS") hide
+    (fp_text reference "G***" (at 0 0) (layer "F.Fab") hide
         (effects (font (size 1.5 1.5) (thickness 0.3)))
       (tstamp 0baf6e53-0fe7-4bad-b4d7-297d7fe06e00)
     )
@@ -3637,7 +3637,7 @@
 
   (gr_rect (start 12.7 12.7) (end 134.62 62.23)
     (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts") (tstamp 7c7d102c-694f-4cae-b872-0f11561c64a0))
-  (gr_text "P80" (at 73.726753 58.581268 270) (layer "B.SilkS") (tstamp 325adce8-ad02-4207-b7d8-6487d997ef70)
+  (gr_text "P80" (at 73.025 58.581268 270) (layer "B.SilkS") (tstamp 325adce8-ad02-4207-b7d8-6487d997ef70)
     (effects (font (size 1 1) (thickness 0.15)) (justify right mirror))
   )
   (gr_text "P80" (at 66.04 58.42 270) (layer "B.SilkS") (tstamp 8fb6826b-0213-475b-896b-a42cc9e87dc1)
@@ -3646,7 +3646,7 @@
   (gr_text "GND" (at 66.04 53.34 270) (layer "B.SilkS") (tstamp 9a8d50e9-e9b1-4626-be57-6458a182682a)
     (effects (font (size 1 1) (thickness 0.15)) (justify left mirror))
   )
-  (gr_text "GND" (at 73.66 52.573508 270) (layer "B.SilkS") (tstamp f1c05745-77eb-44ba-89bb-11b51abaae3e)
+  (gr_text "GND" (at 73.025 52.705 270) (layer "B.SilkS") (tstamp f1c05745-77eb-44ba-89bb-11b51abaae3e)
     (effects (font (size 1 1) (thickness 0.15)) (justify left mirror))
   )
   (gr_text "QCode Breakout\nV1.1\n" (at 17.78 55.88) (layer "F.SilkS") (tstamp 2104db4c-3b89-41f1-a837-1d4f9c08bb18)
