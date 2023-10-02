@@ -11,3 +11,7 @@ Part of what confused me the most about all of this was just how easy it was to 
 
 The connector pinout in question looks like this:
 ![COM_DEBUG Pinout](https://github.com/Sciguy429/Qcode-Breakout-Board/blob/main/Images/COM_DEBUG-Pinout.png)
+
+There are quite literally only two pins to try here, and the name 'COM_DEBUG' implies serial to me. So I hooked up a cheap USB to UART to both of them and turns out that the bottom left pin (SOUTC_P80) just dumps out post codes as single bytes at 115200 baud. No weird formatting, no weird speeds, it just dumps em out. (The other pin appears to be something else, whatever protocol it is using, it is not normal serial. I was unable to read anything out of it.)
+
+This kinda floored me, as I quickly realized that it would be trvial to make a cheap MCU read in those bits and put them up onto some 7-segment displays. I then built the orginal breadboard prototype that is seen in the Reddit post, using some old code from a clock I made years ago to drive the two displays.
