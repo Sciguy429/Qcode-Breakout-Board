@@ -23,7 +23,7 @@ Next up was making some PCB's and I currently have two prototype designs.
 The first is a one to one clone of the breadboard circuit, using two generic 7-segment displays and a relatively compact board layout.
 
 ![3X PCB](https://github.com/Sciguy429/Qcode-Breakout-Board/blob/main/Images/Qcode-Breakout-PCB-3X-V1-1.png)
-The second it a much improved version, adding an additional 4 displays driven off of the ADC pins for more potential functionality. This board is much larger though, and more expensive to manufacture.
+The second is a much improved version, adding an additional 4 displays driven off of the ADC pins for more potential functionality. This board is much larger though, and more expensive to manufacture.
 
 Prototypes of both of these boards are currently on order from JLPCB and should arrive within a month or so. Anyone interested in them is more than welcome to have their own boards manufactured. I had originally setup tolerances to allow for PCB milling (I have a little engraving machine) but I gave up on this once I created the 3X version. The tolerances are still set though, both designs should be millable, though you will need a nicer mill than I have.
 
