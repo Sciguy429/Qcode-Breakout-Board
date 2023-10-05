@@ -1,6 +1,9 @@
 //-- Asus Qcode Card --
 //
 // - Firmware by: Sciguy429
+//
+// - This is the firmware source for the 1X Qcode card. It is very basic, there is little
+// - reason to rebuild this firmware yourself.
 
 //Debounce library
 #include "Debounce.h"
@@ -14,12 +17,16 @@ const uint8_t buttonPin = 12;
 //Button debouncer
 Debounce buttonDebounce = Debounce(buttonPin);
 
+//Total number of displays
+#define MAX_DSP 2
+
 //Mux pins
 const uint8_t muxPins[] = {7, 6, 3, 4, 5, 8, 9, 2}; //A, B, C, D, E, F, G, DP
 
 //Dsp pins
 const uint8_t dspPins[] = {10, 11}; //Left to right
 
+//Display mux outputs
 volatile uint8_t muxPinsOut[][8] = {
   {1, 1, 1, 1, 1, 1, 1, 1}, //Dsp 1
   {1, 1, 1, 1, 1, 1, 1, 1}  //Dsp 2
@@ -56,7 +63,7 @@ int curQCode = 0x00;
 int lastDsp = 0;
 int currentDsp = 0;
 
-//Called once per millisecond
+//Called ~100 times per second
 SIGNAL(TIMER2_COMPA_vect) 
 {
   //Advance The COMPA Register
@@ -69,7 +76,7 @@ SIGNAL(TIMER2_COMPA_vect)
   digitalWrite(dspPins[currentDsp], HIGH); //Activate the next display
   lastDsp = currentDsp;
   currentDsp++;
-  if (currentDsp >= 2) {
+  if (currentDsp >= MAX_DSP) {
     currentDsp = 0;
   }
 }
@@ -111,7 +118,7 @@ void setup()
   }
 
   //Setup the dsp pins
-  for (int i = 0; i < 2; i++)
+  for (int i = 0; i < MAX_DSP; i++)
   {
     pinMode(dspPins[i], OUTPUT);
     digitalWrite(dspPins[i], LOW); //Active HIGH
