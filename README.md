@@ -2,6 +2,8 @@
 
 ![3X PCB](https://github.com/Sciguy429/Qcode-Breakout-Board/blob/main/Images/Qcode-Breakout-PCB-3X-V1-1.png)
 
+**UPDATE:** As of 10-13-2023 I have recived my first prototype PCB's from JLPCB. They look good so far, but I will need to assemble and test them out for sure. More updates soon.
+
 This is an in-progress project that attempts to re add Qcode displays to lower end Asus motherboards. Asus has chosen to only provide this feature on its extremely high end boards, which now cost significantly more than they used too. This project started out as a breadboard proof of concept posted to [Reddit](https://www.reddit.com/r/techsupportmacgyver/comments/16v3af7/asus_removed_qcode_displays_from_low_end/) and gained a decent bit of traction. This repository aims to archive all of the work I have done to make this thing a reality. Do keep in mind, I am a hobbyist, not a professional PCB designer. I take no responsibility if you choose to replicate my work and end up frying your motherboard, or worse.
 
 # How it all works
